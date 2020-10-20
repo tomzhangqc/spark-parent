@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="spark-hive">
+    <output-path>$PROJECT_DIR$/out/artifacts/spark_hive</output-path>
+    <root id="archive" name="spark-hive.jar">
+      <element id="module-output" name="spark-hive" />
+    </root>
+  </artifact>
+</component>

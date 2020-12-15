@@ -5,7 +5,7 @@ object Demo1 {
   def main(args: Array[String]): Unit = {
     val sparkConf = new SparkConf().setMaster("local").setAppName("wordCount")
     val sc = new SparkContext(sparkConf)
-    val fileRDD: RDD[String] = sc.textFile("/Users/IdeaProjects/project/flink-demo/spark/data/scala.txt")
+    val fileRDD: RDD[String] = sc.textFile("datas")
     val wordRDD: RDD[String] = fileRDD.flatMap(_.split(" "))
     val mapRDD: RDD[(String, Int)] = wordRDD.map(data => (data, 1))
     val wordSumRDD = mapRDD.reduceByKey(_ + _)

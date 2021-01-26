@@ -17,7 +17,7 @@ object Demo3 {
 //    dfToRdd.foreach(row => {
 //      println(row(0))
 //    })
-    val userRdd = rdd.map({
+    val userRdd:RDD[User] = rdd.map({
       case (id, name, age) => {
         User(id, name, age)
       }
